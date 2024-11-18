@@ -28,13 +28,14 @@ private WeakReference<Context> contextRef;
 public NovelAdapter(Context context, ...) {
     this.contextRef = new WeakReference<>(context);
     // ...
-}
+}    java´´´
+ 
 
 ### **2. Mejora del Rendimiento de la Red**
 
 Análisis con Network Profiler: Optimizamos llamadas a Firebase Firestore mediante consultas eficientes.
 Persistencia en Caché: Configuración de Firestore para reducir llamadas de red y mejorar tiempos de respuesta.
-java
+
 // En MyApplication.java
 FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
         .setPersistenceEnabled(true)
