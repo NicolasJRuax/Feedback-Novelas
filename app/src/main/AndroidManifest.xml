@@ -17,6 +17,8 @@
         android:label="Gestor de Novelas"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:name=".gestor_novelas.DB.MyApplication"
+
         android:enableOnBackInvokedCallback="true"
         android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
         tools:targetApi="tiramisu">
