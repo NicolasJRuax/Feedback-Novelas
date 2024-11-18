@@ -1,0 +1,121 @@
+@startuml
+package "gestor_novelas" {
+
+    package DB {
+        class AddNovelActivity {
+            - EditText editTextTitle
+            - EditText editTextAuthor
+            - EditText editTextYear
+            - EditText editTextSynopsis
+            - Button buttonAddNovel
+            - NovelDAO novelDAO
+        }
+
+        class NovelDAO {
+            + addNovel(Novel, OnCompleteListener<Void>): void
+            + deleteNovel(Novel): void
+        }
+    }
+
+    package Fragments {
+        class NovelDetailFragment {
+            - TextView textViewTitle
+            - TextView textViewAuthor
+            - TextView textViewYear
+            - TextView textViewSynopsis
+            + newInstance(Novel): NovelDetailFragment
+        }
+
+        class NovelListFragment {
+            - RecyclerView recyclerView
+            - NovelAdapter novelAdapter
+            - NovelViewModel novelViewModel
+            + onNovelSelected(Novel): void
+        }
+    }
+
+    package Novelas {
+        class Novel {
+            - String id
+            - String title
+            - String author
+            - int year
+            - String synopsis
+            - boolean favorite
+            + getId(): String
+            + setId(String): void
+            + getTitle(): String
+            + setTitle(String): void
+            + isFavorite(): boolean
+            + setFavorite(boolean): void
+        }
+
+        class NovelAdapter {
+            - List<Novel> novels
+            - OnDeleteClickListener deleteListener
+            - OnItemClickListener itemClickListener
+            - FirebaseFirestore db
+            + setNovels(List<Novel>): void
+            + updateFavoriteStatus(Novel): void
+        }
+
+        class NovelLoader {
+            - NovelRepository repository
+            + loadInBackground(): List<Novel>
+        }
+
+        class NovelRepository {
+            - FirebaseFirestore db
+            + getAllNovels(): LiveData<List<Novel>>
+            + insert(Novel): void
+            + delete(Novel): void
+        }
+
+        class NovelViewModel {
+            - NovelRepository repository
+            - LiveData<List<Novel>> allNovels
+            + insert(Novel): void
+            + delete(Novel): void
+            + syncNovels(): void
+        }
+    }
+
+    package Sync {
+        class ConnectivityReceiver
+        class NetworkUtil
+        class NotificationHelper
+        class SyncAlarmReceiver
+        class SyncDataReceiver
+        class SyncDataTask
+        class SyncUtils
+    }
+
+    package Widget {
+        class NewAppWidget {
+            + onUpdate(Context, AppWidgetManager, int[]): void
+        }
+
+        class NovelRemoteViewsFactory {
+            - List<Novel> favoriteNovels
+            + loadFavoriteNovels(): void
+            + getViewAt(int): RemoteViews
+        }
+
+        class WidgetService {
+            + onGetViewFactory(Intent): RemoteViewsFactory
+        }
+    }
+
+    MainActivity --> Fragments.NovelListFragment
+    Fragments.NovelListFragment --> Novelas.NovelAdapter
+    Fragments.NovelListFragment --> Novelas.NovelViewModel
+    Fragments.NovelDetailFragment <-- MainActivity
+    Novelas.NovelAdapter --> Novelas.Novel
+    Novelas.NovelLoader --> Novelas.NovelRepository
+    Novelas.NovelRepository --> Novelas.Novel
+    Widget.NewAppWidget --> Widget.WidgetService
+    Widget.WidgetService --> Widget.NovelRemoteViewsFactory
+    Widget.NovelRemoteViewsFactory --> Novelas.Novel
+
+}
+@enduml

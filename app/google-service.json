@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "472755316852",
+    "project_id": "gestornovelasdb",
+    "storage_bucket": "gestornovelasdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472755316852:android:26634c8b15563a6e5bc921",
+        "android_client_info": {
+          "package_name": "com.myproyect.gestornovelasnjr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1SfPG2KQF_bSPHLa4fjnT-TNXqj1qKMY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

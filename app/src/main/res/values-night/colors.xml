@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimaryNight" tools:ignore="MissingDefaultResource">#BB86FC</color>
+    <color name="colorPrimaryDarkNight" tools:ignore="MissingDefaultResource">#3700B3</color>
+    <color name="colorOnPrimaryNight" tools:ignore="MissingDefaultResource">#000000</color>
+    <color name="colorSecondaryNight" tools:ignore="MissingDefaultResource">#03DAC5</color>
+    <color name="colorSecondaryDarkNight" tools:ignore="MissingDefaultResource">#018786</color>
+    <color name="colorOnSecondaryNight" tools:ignore="MissingDefaultResource">#890505</color>
+    <color name="colorBackgroundNight" tools:ignore="MissingDefaultResource">#121212</color>
+    <color name="textColorPrimaryNight" tools:ignore="MissingDefaultResource">#5777EB</color>
+    <color name="textColorSecondaryNight" tools:ignore="MissingDefaultResource">#830C95</color>
+
+</resources>

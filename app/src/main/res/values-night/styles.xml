@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Estilo Oscuro para Aplicación -->
+    <style name="AppTheme.Dark" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Personalización del Tema -->
+        <item name="colorPrimary">@color/colorPrimaryNight</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkNight</item>
+        <item name="colorAccent">@color/colorSecondaryNight</item>
+
+        <!-- Fondo y Colores de Texto -->
+        <item name="android:windowBackground">@color/colorBackgroundNight</item>
+        <item name="android:textColor">@color/textColorPrimaryNight</item>
+        <item name="android:textColorPrimary">@color/textColorSecondaryNight</item>
+
+    </style>
+
+</resources>

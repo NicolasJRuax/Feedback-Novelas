@@ -1,0 +1,17 @@
+@startuml
+actor User
+
+package "Gestor de Novelas" {
+    usecase "Agregar novela a favoritos" as UC_Fav
+    usecase "Eliminar novela de favoritos" as UC_Unfav
+    usecase "Sincronizar datos" as UC_Sync
+    usecase "Visualizar detalles de la novela" as UC_Details
+    usecase "Ver lista de novelas favoritas en widget" as UC_Widget
+}
+
+User --> UC_Fav
+User --> UC_Unfav
+User --> UC_Sync
+User --> UC_Details
+User --> UC_Widget
+@enduml

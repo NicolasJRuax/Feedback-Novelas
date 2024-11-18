@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Tema Oscuro General -->
+    <style name="Theme.GestorNovelas.Dark" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Colores Primarios -->
+        <item name="colorPrimary">@color/colorPrimaryNight</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDarkNight</item>
+        <item name="colorOnPrimary">@color/colorOnPrimaryNight</item>
+
+        <!-- Colores Secundarios -->
+        <item name="colorSecondary">@color/colorSecondaryNight</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryDarkNight</item>
+        <item name="colorOnSecondary">@color/colorOnSecondaryNight</item>
+
+        <!-- Fondo de Ventana -->
+        <item name="android:windowBackground">@color/colorBackgroundNight</item>
+
+        <!-- Colores de Texto -->
+        <item name="android:textColorPrimary">@color/textColorPrimaryNight</item>
+        <item name="android:textColorSecondary">@color/textColorSecondaryNight</item>
+
+        <!-- Barra de Estado -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+</resources>

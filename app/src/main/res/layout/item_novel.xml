@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@color/colorBackgroundNight"
+    android:layout_margin="4dp"
+    android:elevation="4dp">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Título de la Novela"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/textColorPrimaryNight"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/textViewAuthor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Autor"
+        android:textSize="14sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/textColorPrimaryNight"
+        android:layout_marginBottom="4dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <ImageButton
+            android:id="@+id/buttonFavorite"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_favorites"
+            android:contentDescription="Agregar a favoritos"
+            android:tint="@color/textColorPrimaryNight"
+            android:layout_marginEnd="8dp"
+            tools:ignore="UseAppTint" />
+
+        <ImageButton
+            android:id="@+id/buttonDetails"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_details"
+            android:contentDescription="Ver detalles"
+            android:tint="@color/textColorPrimaryNight"
+            android:layout_marginEnd="8dp"
+            tools:ignore="UseAppTint" />
+
+        <ImageButton
+            android:id="@+id/buttonDelete"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_delete"
+            android:contentDescription="Eliminar novela"
+            android:tint="@color/textColorPrimaryNight"
+            tools:ignore="UseAppTint" />
+    </LinearLayout>
+
+</LinearLayout>
