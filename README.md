@@ -1,3 +1,5 @@
+https://github.com/NicolasJRuax/Feedback5.git
+
 # Feedback5
 
 Gestor de Novelas es una aplicación Android diseñada para gestionar una colección de novelas. Ofrece funcionalidades como agregar nuevas novelas, eliminar existentes, marcar novelas como favoritas y visualizar detalles completos. Además, incluye características avanzadas como sincronización de datos con Firebase Firestore, soporte para un widget en la pantalla de inicio y opciones de configuración como modo oscuro.
