@@ -33,6 +33,14 @@ android {
 }
 
 dependencies {
+
+    // Google Play Services Maps y Location
+    implementation ("com.google.android.gms:play-services-maps:18.1.0")
+    implementation ("com.google.android.gms:play-services-location:21.0.1")
+
+    // Librería de Geocodificación
+    implementation ("com.google.android.libraries.places:places:2.6.0")
+
     implementation(platform("com.google.firebase:firebase-bom:33.3.0"))
     implementation("com.google.firebase:firebase-firestore")
     implementation("androidx.appcompat:appcompat:1.6.1")

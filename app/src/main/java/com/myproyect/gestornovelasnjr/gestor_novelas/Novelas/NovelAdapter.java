@@ -69,9 +69,9 @@ public class NovelAdapter extends RecyclerView.Adapter<NovelAdapter.NovelHolder>
         holder.buttonFavorite.setOnClickListener(v -> {
             if (currentNovel.getId() == null) {
                 Log.e("Firestore", "ID de la novela es nulo; no se puede actualizar el estado de favorito.");
-                Context context = contextRef.get();
-                if (context != null) {
-                    Toast.makeText(context, "Error: ID de novela es nulo", Toast.LENGTH_SHORT).show();
+                Context context1 = contextRef.get();
+                if (context1 != null) {
+                    Toast.makeText(context1, "Error: ID de novela es nulo", Toast.LENGTH_SHORT).show();
                 }
                 return;
             }
@@ -80,9 +80,9 @@ public class NovelAdapter extends RecyclerView.Adapter<NovelAdapter.NovelHolder>
             currentNovel.setFavorite(isFavorite);
             updateFavoriteStatus(currentNovel);
 
-            Context context = contextRef.get();
-            if (context != null) {
-                Toast.makeText(context, currentNovel.getTitle() + (isFavorite ? " añadido a favoritos" : " eliminado de favoritos"), Toast.LENGTH_SHORT).show();
+            Context context1 = contextRef.get();
+            if (context1 != null) {
+                Toast.makeText(context1, currentNovel.getTitle() + (isFavorite ? " añadido a favoritos" : " eliminado de favoritos"), Toast.LENGTH_SHORT).show();
             }
             holder.buttonFavorite.setImageResource(isFavorite ? android.R.drawable.btn_star_big_on : android.R.drawable.btn_star_big_off);
         });
@@ -102,6 +102,11 @@ public class NovelAdapter extends RecyclerView.Adapter<NovelAdapter.NovelHolder>
     public void setNovels(List<Novel> novels) {
         this.novels = novels;
         notifyDataSetChanged();
+    }
+
+    // Agrega este método para obtener la lista de novelas
+    public List<Novel> getNovels() {
+        return novels;
     }
 
     private void updateFavoriteStatus(Novel novel) {

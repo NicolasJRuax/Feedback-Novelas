@@ -1,8 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:orientation="vertical">
-    <EditText android:id="@+id/editTextTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Título" android:padding="12dp" android:minHeight="48dp" android:textSize="16sp"/>
-    <EditText android:id="@+id/editTextAuthor" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Autor" android:padding="12dp" android:minHeight="48dp" android:textSize="16sp"/>
-    <EditText android:id="@+id/editTextYear" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Año de publicación" android:padding="12dp" android:minHeight="48dp" android:textSize="16sp"/>
-    <EditText android:id="@+id/editTextSynopsis" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Sinopsis" android:padding="12dp" android:minHeight="48dp" android:inputType="textMultiLine" android:maxLines="3" android:textSize="16sp"/>
-    <Button android:id="@+id/buttonAddNovel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Agregar Novela" android:padding="12dp"/>
-</LinearLayout>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/buttonAddNovel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agregar Novela" />
+
+
+        <EditText
+            android:id="@+id/editTextTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            android:hint="Título" />
+
+        <EditText
+            android:id="@+id/editTextAuthor"
+            android:layout_width="match_parent"
+            android:padding="24dp"
+            android:layout_height="wrap_content"
+            android:hint="Autor" />
+
+        <EditText
+            android:id="@+id/editTextYear"
+            android:layout_width="match_parent"
+            android:padding="24dp"
+            android:layout_height="wrap_content"
+            android:hint="Año" />
+
+        <EditText
+            android:id="@+id/editTextSynopsis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Sinopsis"
+            android:inputType="textMultiLine"
+            android:minLines="3" />
+
+        <!-- Nuevo campo para la ubicación -->
+        <EditText
+            android:id="@+id/editTextLocation"
+            android:layout_width="match_parent"
+            android:padding="24dp"
+            android:layout_height="wrap_content"
+            android:hint="Ubicación (dirección)" />
+
+    </LinearLayout>
+</ScrollView>

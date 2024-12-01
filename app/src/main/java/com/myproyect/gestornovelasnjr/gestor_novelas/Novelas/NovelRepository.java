@@ -22,6 +22,7 @@ public class NovelRepository {
     public LiveData<List<Novel>> getAllNovels() {
         MutableLiveData<List<Novel>> novelsLiveData = new MutableLiveData<>();
 
+        // Al obtener las novelas
         novelCollection.addSnapshotListener((querySnapshot, e) -> {
             if (e != null) {
                 Log.e("Firestore", "Listen failed.", e);
@@ -33,7 +34,7 @@ public class NovelRepository {
                 for (DocumentSnapshot document : querySnapshot.getDocuments()) {
                     Novel novel = document.toObject(Novel.class);
                     if (novel != null) {
-                        novel.setId(document.getId()); // Asigna el ID de Firestore al objeto Novel
+                        novel.setId(document.getId());
                         novels.add(novel);
                     }
                 }
