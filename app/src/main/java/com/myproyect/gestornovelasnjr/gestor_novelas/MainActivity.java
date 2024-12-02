@@ -35,6 +35,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import com.google.firebase.firestore.GeoPoint;
 import com.myproyect.gestornovelasnjr.R;
 import com.myproyect.gestornovelasnjr.gestor_novelas.Novelas.Novel;
 import com.myproyect.gestornovelasnjr.gestor_novelas.Novelas.NovelAdapter;

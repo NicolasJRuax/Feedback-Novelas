@@ -58,6 +58,8 @@ dependencies {
     testImplementation ("org.mockito:mockito-core:4.11.0")
     testImplementation ("androidx.test:core:1.5.0")
     testImplementation ("org.robolectric:robolectric:4.9.2")
+    implementation ("com.google.android.gms:play-services-maps:18.0.2")
+    implementation ("com.google.android.gms:play-services-location:21.0.1")
 
 
     implementation("androidx.work:work-runtime:2.8.1")
